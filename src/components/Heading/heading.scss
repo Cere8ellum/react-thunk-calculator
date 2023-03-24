@@ -1,0 +1,18 @@
+@use "sass:map";
+@import "../../assets/scss/variables.scss";
+
+.heading {
+  width: 50%;
+  color: map.get($colors, black);
+  @include fluidFontSize(30px, 54px, 320px, 1280px, 22px);
+}
+@media screen and (max-width: 1320px) {
+  .heading {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .heading {
+    width: 100%;
+  }
+}

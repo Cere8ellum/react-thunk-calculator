@@ -1,0 +1,22 @@
+@use "sass:map";
+@import "../../assets/scss/variables.scss";
+
+.input {
+  height: 68px;
+  width: 100%;
+  border: none;
+  border-radius: 40px;
+  background-color: #f3f3f4;
+  @include fluidFontSize(22px, 30px, 320px, 1280px, 22px);
+}
+
+.input-disabled {
+  opacity: 0.4;
+}
+
+/*Стрелки*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

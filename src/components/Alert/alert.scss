@@ -1,0 +1,31 @@
+@use "sass:map";
+@import "../../assets/scss/variables.scss";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+
+  .text {
+    @include fluidFontSize(22px, 26px, 480px, 1280px, 22px);
+  }
+  .closeBtn {
+    @include fluidFontSize(36px, 54px, 480px, 1280px, 36px);
+    rotate: (45deg);
+    cursor: pointer;
+
+    &:hover {
+      scale: 1.2;
+    }
+  }
+}
+
+.success {
+  background-color: map.get($colors, success);
+}
+.error {
+  background-color: map.get($colors, danger);
+}

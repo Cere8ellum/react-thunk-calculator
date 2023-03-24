@@ -1,0 +1,33 @@
+@use "sass:map";
+@import "../../assets/scss/variables.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .groupWrapper {
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 10px;
+    border-radius: 16px;
+    background-color: #f3f3f4;
+
+    .inputsWrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .icon {
+      height: 54px;
+      width: 69px;
+      border: none;
+      border-radius: 16px;
+      @include fluidFontSize(22px, 30px, 320px, 1280px, 22px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

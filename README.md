@@ -1,1 +1,1 @@
-# react-thunk-calculator
+## Simple React Calculator With Thunk Middleware

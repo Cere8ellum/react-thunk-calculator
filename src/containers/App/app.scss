@@ -1,0 +1,123 @@
+@use "sass:map";
+@import "../../assets/scss/variables.scss";
+
+@font-face {
+  font-family: "Nekst";
+  src: local("Nekst"), local("Nekst-Black"),
+    url("../../assets/fonts/Nekst-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Regular"), local("Gilroy-Regular"),
+    url("../../assets/fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: Nekst;
+  color: map.get($colors, dark-grey);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px 48px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.info {
+  width: 100%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: grid;
+  grid-template-areas:
+    "carPrice initFee leaseTerm"
+    "leaseSummary monthFee button";
+  gap: 35px 15px;
+  align-items: end;
+  border: none;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 820px) {
+  .form {
+    grid-template-areas:
+      "carPrice carPrice"
+      "initFee initFee"
+      "leaseTerm leaseTerm"
+      "leaseSummary monthFee"
+      "button .";
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .form {
+    grid-template-areas:
+      "carPrice"
+      "initFee"
+      "leaseTerm"
+      "leaseSummary"
+      "monthFee"
+      "button";
+  }
+}
+
+.carPrice {
+  grid-area: carPrice;
+}
+.initFee {
+  grid-area: initFee;
+}
+.leaseTerm {
+  grid-area: leaseTerm;
+}
+.leaseSummary {
+  grid-area: leaseSummary;
+}
+.monthFee {
+  grid-area: monthFee;
+}
+.button {
+  grid-area: button;
+}

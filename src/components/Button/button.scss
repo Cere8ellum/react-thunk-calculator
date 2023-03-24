@@ -1,0 +1,37 @@
+@use "sass:map";
+@import "../../assets/scss/variables.scss";
+
+.wrapper {
+  width: 100%;
+}
+.button {
+  min-height: 68px;
+  width: 100%;
+  border: none;
+  border-radius: 40px;
+  background-color: map.get($colors, orange);
+  color: map.get($colors, white);
+  @include fluidFontSize(22px, 26px, 480px, 1280px, 22px);
+
+  &:hover {
+    &:enabled {
+      background-color: map.get($colors, black);
+    }
+  }
+
+  &:active {
+    &:enabled {
+      background-color: map.get($colors, dark-grey);
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .button {
+    height: 60px;
+  }
+}
+.button-disabled {
+  background-color: #ff9514;
+  opacity: 0.4;
+}

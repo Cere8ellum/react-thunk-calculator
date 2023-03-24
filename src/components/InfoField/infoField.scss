@@ -1,0 +1,12 @@
+@use "sass:map";
+@import "../../assets/scss/variables.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .value {
+    @include fluidFontSize(36px, 30px, 320px, 1280px, 22px);
+  }
+}

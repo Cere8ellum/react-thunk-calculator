@@ -1,0 +1,10 @@
+.label {
+  font-family: Gilroy;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 320px) {
+  .label {
+    font-size: 14px;
+  }
+}
