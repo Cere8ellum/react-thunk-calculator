@@ -1,0 +1,28 @@
+{
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2015
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "plugins": ["react"],
+    "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "double"],
+        "indent": "off",
+        "no-fallthrough": "off", // disallow fallthrough of case statements
+        "no-multiple-empty-lines": [1, {"max": 2}], // disallow multiple empty lines (off by default)
+        "no-nested-ternary": 1, // disallow nested ternary expressions (off by default)
+        "eqeqeq": 2, // require the use of === and !==
+        "react/prop-types": "off" // Prevent missing props validation in a React component definition
+    }    
+  }

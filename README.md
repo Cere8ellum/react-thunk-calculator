@@ -43,3 +43,15 @@ npm run build-prod
 ```bash
 npm run clean
 ```
+
+### Compare js with rules of linter
+
+```bash
+npm run lint
+```
+
+### Compare js with rules of linter and then fix all errors
+
+```bash
+npm run lint-fix
+```
